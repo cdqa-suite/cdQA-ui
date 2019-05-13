@@ -38,13 +38,14 @@ export default {
     onSubmit(evt) {
       evt.preventDefault()
       this.status = 'loading'
-      axios.post("localhost:5000/api", {query: this.query})
+      let self = this;
+      axios.get("http://localhost:5000/api", { params: {query: self.query} })
       .then(function (response) {
-        this.prediction = response.data.prediction;
-        this.status = "done"
+        self.prediction = response.data.prediction;
+        self.status = "done"
       })
       .catch(function (error) {
-        alert(error);
+        console.log(error);
       });
     }
   }
