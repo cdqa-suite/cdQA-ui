@@ -10,10 +10,10 @@
     </div>
 
     <div v-else-if="status == 'done'">
-      <b-button variant="primary" id="popover-button-sync">{{ prediction }}</b-button>
+      <b-button variant="primary" id="popover-button-sync">{{ answer }}</b-button>
       <b-popover :placement="'bottom'" :show.sync="show" target="popover-button-sync">
-        <template slot="title">Document Title <a href="/">(Link)</a></template>
-        The paragraph of the retrieved article with <strong><span class="text-primary">the answer highlighted</span></strong> with some HTML.
+        <template slot="title">{{ title }}</template>
+        <Highlighter highlightClassName="highlight" :searchWords="[answer]" :autoEscape="true" :textToHighlight="paragraph"/>
       </b-popover>
     </div>
 
@@ -23,15 +23,21 @@
 
 <script>
 import axios from 'axios';
+import Highlighter from 'vue-highlight-words'
 
 export default {
   name: 'cdqaUI',
+  components: {
+    Highlighter
+  },
   data() {
     return {
       query: '',
       show: false,
       status: 'started',
-      prediction: ''
+      answer: '',
+      title: '',
+      paragraph: '',
     }
   },
   methods: {
@@ -41,7 +47,9 @@ export default {
       let self = this;
       axios.get("http://localhost:5000/api", { params: {query: self.query} })
       .then(function (response) {
-        self.prediction = response.data.prediction;
+        self.answer = response.data.answer;
+        self.title = response.data.title;
+        self.paragraph = response.data.paragraph;
         self.status = "done"
       })
       .catch(function (error) {
@@ -54,4 +62,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .highlight {
+    background-color: yellow;
+    font-weight: bold;
+  }
 </style>
