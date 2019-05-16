@@ -9,7 +9,7 @@
       <b-spinner small :variant="'primary'" label="Small Spinner"></b-spinner> Searching the answer...
     </div>
 
-    <div v-else-if="status == 'done'">
+    <div v-else-if="status == 'done' && query != ''">
       <b-button variant="primary" id="popover-button-sync">{{ answer }}</b-button>
       <b-popover :placement="'bottom'" :show.sync="show" target="popover-button-sync">
         <template slot="title">{{ title }}</template>
