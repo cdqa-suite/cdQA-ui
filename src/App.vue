@@ -18,5 +18,9 @@ export default {
 <style>
 #app {
   text-align: left;
+  font-family: Inter, Inter UI, Inter-UI, SF Pro Display, SF UI Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: +0.37px;
+  color: rgb(175, 175, 175)
 }
 </style>
