@@ -1,5 +1,7 @@
 # cdqa-ui
 
+[![Build Status](https://travis-ci.com/fmikaelian/cdQA-ui.svg?token=Vzy9RRKRZ41ynd9q2BRX&branch=master)](https://travis-ci.com/fmikaelian/cdQA-ui)
+
 A user interface for cdQA
 
 ## Project setup
