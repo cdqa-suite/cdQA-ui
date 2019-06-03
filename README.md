@@ -64,6 +64,12 @@ git clone https://github.com/fmikaelian/cdQA-ui
 cd cdQA-ui
 ```
 
+Install package
+
+```shell
+npm install
+```
+
 Compiles and hot-reloads for development
 
 ```shell
