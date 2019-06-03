@@ -1,7 +1,17 @@
 {
   "name": "cdqa-ui",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.4",
+  "description": "A user interface for cdQA",
+  "license": "MIT",
+  "keywords": [
+    "reading-comprehension",
+    "question-answering",
+    "deep-learning",
+    "natural-language-processing",
+    "information-retrieval",
+    "bert",
+    "vuejs"
+  ],
   "main": "dist/cdqaUI.ssr.js",
   "module": "dist/cdqaUI.esm.js",
   "unpkg": "dist/cdqaUI.min.js",

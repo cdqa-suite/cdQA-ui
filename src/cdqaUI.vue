@@ -56,16 +56,17 @@
 <script>
 import axios from "axios";
 import Highlighter from "vue-highlight-words";
+import { ToggleButton } from 'vue-js-toggle-button'
 
 export default {
   name: "CdqaUI",
   components: {
-    Highlighter
+    Highlighter,
+    ToggleButton
   },
   props: {
     api_endpoint: {
       type: String,
-      required: true,
       default: "http://localhost:5000/api"
     }
   },

@@ -2,10 +2,8 @@ import Vue from 'vue'
 import MyComponent from './src/entry';
 
 import BootstrapVue from "bootstrap-vue"
-import ToggleButton from "vue-js-toggle-button"
 
-Vue.use(BootstrapVue);
-Vue.use(ToggleButton);
+Vue.use(BootstrapVue)
 
 import "bootstrap/dist/css/bootstrap.css"
 import "bootstrap-vue/dist/bootstrap-vue.css"
