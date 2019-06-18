@@ -18,9 +18,12 @@
       />
       <b-form @submit="onSubmit">
         <b-input-group>
-          <b-form-input placeholder="Ask a question..." v-model="query"></b-form-input>
+          <b-dropdown slot="prepend" text="Choose an example..." variant="outline-secondary" size="sm">
+            <b-dropdown-item v-for="i in queries_examples" :key="i" @click="query = i">{{ i }}</b-dropdown-item>
+          </b-dropdown>
+          <b-form-input v-model="query" placeholder="or type a question..."></b-form-input>
           <b-input-group-append>
-            <b-button class="gradient-fill background hover">
+            <b-button class="gradient-fill background hover" @click="onSubmit">
               <b-spinner v-if="status == 'loading'" small :variant="'white'" label="Small Spinner"></b-spinner>
               <i v-else class="fa fa-search"></i>
             </b-button>
@@ -68,7 +71,13 @@ export default {
     api_endpoint: {
       type: String,
       default: "http://localhost:5000/api"
-    }
+    },
+    queries_examples: {
+      type: Array,
+      default: function () {
+        return ['What is Artificial Intelligence?', 'What is Blockchain?']
+      }
+    },
   },
   data() {
     return {
