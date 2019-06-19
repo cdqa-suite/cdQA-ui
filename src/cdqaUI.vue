@@ -150,15 +150,8 @@ export default {
 }
 
 span.gradient-fill {
-  -moz-osx-font-smoothing: grayscale;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background-attachment: scroll;
-  background-clip: text;
-  background-color: transparent;
-  background-origin: padding-box;
-  background-position: 0 0;
-  background-repeat: repeat;
-  background-size: auto;
   font-size: 20px;
   font-weight: 700;
   line-height: 2.5;
