@@ -7,14 +7,17 @@
 
 A user interface for cdQA
 
+![]()
+
 ## Table of contents <!-- omit in toc -->
 
-- [Installation](#installation)
-- [Import](#import)
-- [Usage](#usage)
-- [Properties](#properties)
-- [Development](#development)
-- [License](#license)
+- [Installation](#Installation)
+- [Import](#Import)
+- [Usage](#Usage)
+- [Demo](#Demo)
+- [Properties](#Properties)
+- [Development](#Development)
+- [License](#License)
 
 ## Installation
 
@@ -46,21 +49,27 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 ## Usage
 
 ```xml
-<CdqaUI api_endpoint="http://localhost:5000/api"></CdqaUI>
+<CdqaUI api_endpoint_cpu="http://localhost:5000/api" :queries_examples="['What is Artificial Intelligence?', 'What is Blockchain?']"></CdqaUI>
 ```
+
+## Demo
+
+Check our demo live at: https://cdqa-suite.github.io
 
 ## Properties
 
-| Name            | Type              | Default     | Description                        |
-| ---             | ---               | ---         | ---                                |
-| api_endpoint           | string           | `http://localhost:5000/api`       | The url of your `cdQA` REST API. |
+| Name         | Type   | Default                     | Description                      |
+| ------------ | ------ | --------------------------- | -------------------------------- |
+| api_endpoint_cpu | string | `http://localhost:5000/api` | The url of your `cdQA` REST API on CPU. |
+| api_endpoint_gpu | string | `http://localhost:5000/api` | The url of your `cdQA` REST API on GPU. |
+| queries_examples | array | `['What is artificial intelligence?', 'What is natural language processing?']` | The list of example queries. |
 
 ## Development
 
 Clone the repository
 
 ```shell
-git clone https://github.com/fmikaelian/cdQA-ui
+git clone https://github.com/cdqa-suite/cdQA-ui
 cd cdQA-ui
 ```
 

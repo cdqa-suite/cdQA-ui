@@ -68,14 +68,18 @@ export default {
     ToggleButton
   },
   props: {
-    api_endpoint: {
+    api_endpoint_cpu: {
+      type: String,
+      default: "http://localhost:5000/api"
+    },
+    api_endpoint_gpu: {
       type: String,
       default: "http://localhost:5000/api"
     },
     queries_examples: {
       type: Array,
       default: function () {
-        return ['What is Artificial Intelligence?', 'What is Blockchain?']
+        return ['What is artificial intelligence?', 'What is natural language processing?']
       }
     },
   },
@@ -94,9 +98,14 @@ export default {
     onSubmit(evt) {
       evt.preventDefault();
       this.status = "loading";
+      if (this.gpu) {
+        var api_endpoint = this.api_endpoint_gpu
+      } else {
+        var api_endpoint = this.api_endpoint_cpu
+      }
       let self = this;
       axios
-        .get(self.api_endpoint, { params: { query: self.query } })
+        .get(api_endpoint, { params: { query: self.query } })
         .then(function(response) {
           self.answer = response.data.answer;
           self.title = response.data.title;
