@@ -2,7 +2,7 @@
   "name": "cdqa-ui",
   "version": "1.0.8",
   "description": "A user interface for cdQA",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "reading-comprehension",
     "question-answering",
