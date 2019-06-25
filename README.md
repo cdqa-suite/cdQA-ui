@@ -1,13 +1,13 @@
 # cdqa-ui
 
-[![Build Status](https://travis-ci.com/fmikaelian/cdQA-ui.svg?token=Vzy9RRKRZ41ynd9q2BRX&branch=master)](https://travis-ci.com/fmikaelian/cdQA-ui)
+[![Build Status](https://travis-ci.com/cdqa-suite/cdQA-ui.svg?token=Vzy9RRKRZ41ynd9q2BRX&branch=master)](https://travis-ci.com/cdqa-suite/cdQA-ui)
 [![NPM Version](https://img.shields.io/npm/v/cdqa-ui.svg)](https://www.npmjs.com/package/cdqa-ui)
 [![NPM Downloads](https://img.shields.io/npm/dm/cdqa-ui.svg)](https://www.npmjs.com/package/cdqa-ui)
 ![NPM Downloads](https://img.shields.io/npm/l/cdqa-ui.svg)
 
 A user interface for cdQA
 
-![]()
+![](https://cdqa-suite.github.io/cdQA-website/img/suite-2.822c5624.png)
 
 ## Table of contents <!-- omit in toc -->
 
@@ -54,7 +54,7 @@ import "bootstrap-vue/dist/bootstrap-vue.css"
 
 ## Demo
 
-Check our demo live at: https://cdqa-suite.github.io
+Check our demo live at: https://cdqa-suite.github.io/cdQA-website
 
 ## Properties
 
