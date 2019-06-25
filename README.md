@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/cdqa-suite/cdQA-ui.svg?token=Vzy9RRKRZ41ynd9q2BRX&branch=master)](https://travis-ci.com/cdqa-suite/cdQA-ui)
 [![NPM Version](https://img.shields.io/npm/v/cdqa-ui.svg)](https://www.npmjs.com/package/cdqa-ui)
 [![NPM Downloads](https://img.shields.io/npm/dm/cdqa-ui.svg)](https://www.npmjs.com/package/cdqa-ui)
-![NPM Downloads](https://img.shields.io/npm/l/cdqa-ui.svg)
+![GitHub](https://img.shields.io/github/license/cdqa-suite/cdqa-ui.svg)
 
 A user interface for cdQA
 
