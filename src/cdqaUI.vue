@@ -101,7 +101,7 @@ export default {
       if (this.gpu) {
         var api_endpoint = this.api_endpoint_gpu
       } else {
-        var api_endpoint = this.api_endpoint_cpu
+        api_endpoint = this.api_endpoint_cpu
       }
       let self = this;
       axios
